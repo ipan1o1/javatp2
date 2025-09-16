@@ -36,16 +36,7 @@ public class Chrono {
     }
 
     public boolean avant(Chrono c){
-        this.normalise();
-        c.normalise();
-        if (this.h <= c.h ){
-            if (this.m <= c.m){
-                if (this.s <= c.s){
-                    return true;
-                }
-            }
-        }
-        return false;
+        return this.toSeconds() <= c.toSeconds();
     }
 
     public void avance(int n){

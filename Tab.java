@@ -12,22 +12,21 @@ public class Tab {
     }
 
     public int length(){
-        int res = this.fin - this.debut;
-        return res;
+        return this.fin - this.debut;
     }
 
     public String get(int i){
-        return tableau[i];
+        return tableau[i - debut];
     }
 
     public void set(int i, String s){
-        tableau[i] = s;
+        tableau[i - debut] = s;
     }
 
     public static  void main(String[] args) {
         Tab t1 = new Tab(1,7);
-        System.out.print(t1.length());
+        System.out.println(t1.length());
         t1.set(1, "ordi");
-        System.out.print(t1.get(1));
+        System.out.println(t1.get(1));
     }
 }
